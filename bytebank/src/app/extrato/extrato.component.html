@@ -1,15 +1,15 @@
-<table>
-  <thead>
-    <th>Data</th>
-    <th>Valor</th>
-    <th>Destino</th>
+<table class="tabela">
+  <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">Data</th>
+    <th class="tabela__cabecalho__conteudo">Valor</th>
+    <th class="tabela__cabecalho__conteudo">Destino</th>
   </thead>
   <tbody>
-    <tr *ngFor="let transferencia of transferencias">
-      <td>{{ transferencia?.data | date: "short" }}</td>
+    <tr class="tabela__linha" *ngFor="let transferencia of transferencias">
+      <td tabela__conteudo>{{ transferencia?.data | date: "short" }}</td>
       <!-- Usando data pipe para escolher o formato de exibição da data-->
-      <td>{{ transferencia?.valor | currency }}</td>
-      <td>Destino: {{ transferencia?.destino }}</td>
+      <td tabela__conteudo>{{ transferencia?.valor | currency }}</td>
+      <td tabela__conteudo>Destino: {{ transferencia?.destino }}</td>
     </tr>
   </tbody>
 </table>
